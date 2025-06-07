@@ -1,0 +1,49 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+# HTML Project Structure
+
+This project is an HTML project utilizing GSAP for animations and Tailwind CSS for styling. Below is the project structure:
+
+## Directory Structure
+
+```
+.
+├── src/ - Main directory containing source code
+│   ├── index.html - Main page of the project
+│   ├── assets/ - Contains all static assets
+│   │   ├── images/ - Stores images
+│   │   ├── javascripts/ - Contains JavaScript files
+│   │   │   ├── gsap.min.js - GSAP library for animation
+│   │   │   └── main.js - Main JavaScript file (js apply all)
+│   │   └── stylesheets/ - Contains CSS files
+│   │       ├── dist/ - CSS compiled by Tailwind
+│   │       │   └── main.css - Compiled CSS file (never edited)
+│   │       └── main.css - Main CSS file
+│   └── pages/ - Contains additional HTML pages
+├── tailwind.config.js - Tailwind CSS configuration
+```
+
+## Technologies Used
+
+- **HTML**: Structures web pages
+- **Tailwind CSS V3**: Utility-first CSS framework
+- **GSAP**: JavaScript library for creating animations
+- **JavaScript**: Handles interactivity and DOM manipulation
+
+## Important Files
+
+- [src/index.html](mdc:src/index.html) - Main HTML file of the project
+- [tailwind.config.js](mdc:tailwind.config.js) - Tailwind CSS configuration
+- [eslint.config.js](mdc:eslint.config.js) - ESLint configuration
+- [.prettierrc](mdc:.prettierrc) - Prettier configuration
+- [package.json](mdc:package.json) - Manages dependencies and scripts for development
+
+## Conventions
+
+1. Use Tailwind CSS classes in HTML; do not write new styling in [main.css](mdc:src/assets/stylesheets/main.css)
+2. Always use GSAP for animations
+3. Clear and semantic HTML structure
+4. Modular JavaScript

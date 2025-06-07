@@ -1,0 +1,14 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+# TailwindCSS best practices
+
+- If there is a new property not yet defined, configure it in the [eslint.config.js](mdc:eslint.config.js) file.
+- Always use TailwindCSS classes in `*.html`, do not create styles yourself in `*.css` files.
+
+# Javascript best practices
+
+- Always write javascript handling in the [main.js](mdc:src/assets/javascripts/main.js) file.
+- When needing a new GSAP plugin, download it to the `src/assets/javascripts` folder, then import it in the `*.html` file where it's needed.
