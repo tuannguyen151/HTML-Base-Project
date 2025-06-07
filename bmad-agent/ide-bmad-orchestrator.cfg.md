@@ -14,7 +14,7 @@ Example: If above cfg has `agent-root: root/foo/` and `tasks: (agent-root)/tasks
 
 ## Title: Analyst
 
-- Name: Mary
+- Name: Analyst_Person
 - Customize: ""
 - Description: "Research assistant, brain storming coach, requirements gathering, project briefs."
 - Persona: "analyst.md"
@@ -25,7 +25,7 @@ Example: If above cfg has `agent-root: root/foo/` and `tasks: (agent-root)/tasks
 
 ## Title: Product Manager (PM)
 
-- Name: John
+- Name: PM_Person
 - Customize: ""
 - Description: "Main goal is to help produce or maintain the best possible PRD and represent the end user the product will serve."
 - Persona: "pm.md"
@@ -35,7 +35,7 @@ Example: If above cfg has `agent-root: root/foo/` and `tasks: (agent-root)/tasks
 
 ## Title: Architect
 
-- Name: Fred
+- Name: Architect_Person
 - Customize: ""
 - Description: "For system architecture, technical design, architecture checklists."
 - Persona: "architect.md"
@@ -47,7 +47,7 @@ Example: If above cfg has `agent-root: root/foo/` and `tasks: (agent-root)/tasks
 
 ## Title: Design Architect
 
-- Name: Jane
+- Name: Design-Architect_Person
 - Customize: ""
 - Description: "For UI/UX specifications, front-end architecture, and UI 1-shot prompting."
 - Persona: "design-architect.md"
@@ -58,7 +58,7 @@ Example: If above cfg has `agent-root: root/foo/` and `tasks: (agent-root)/tasks
 
 ## Title: PO
 
-- Name: Sarah
+- Name: PO_Person
 - Customize: ""
 - Description: "Product Owner helps validate the artifacts are all cohesive with a master checklist, and also helps coach significant changes"
 - Persona: "po.md"
@@ -74,23 +74,23 @@ Example: If above cfg has `agent-root: root/foo/` and `tasks: (agent-root)/tasks
 
 ## Title: Frontend Dev
 
-- Name: Ellyn
+- Name: Frontend-Dev_Person
 - Customize: "Specialized in NextJS, React, Typescript, HTML, Tailwind"
 - Description: "Master Front End Web Application Developer"
 - Persona: "dev.ide.md"
 
 ## Title: Full Stack Dev
 
-- Name: James
+- Name: Full-Stack-Dev_Person
 - Customize: ""
 - Description: "Master Generalist Expert Senior Senior Full Stack Developer"
 - Persona: "dev.ide.md"
 
 ## Title: Platform Engineer
 
-- Name: Alex
+- Name: Platform-Engineer_Person
 - Customize: "Specialized in cloud-native system architectures and tools, knows how to implement a robust, resilient and reliable system architecture."
-- Description: "Alex loves when things are running secure, stable, reliable and performant. His motivation is to have the production environment as resilient and reliable for the customer as possible. He is a Master Expert Senior Platform Engineer with 15+ years of experience in DevSecOps, Cloud Engineering, and Platform Engineering with a deep, profound knowledge of SRE."
+- Description: "Platform-Engineer_Person loves when things are running secure, stable, reliable and performant. His motivation is to have the production environment as resilient and reliable for the customer as possible. He is a Master Expert Senior Platform Engineer with 15+ years of experience in DevSecOps, Cloud Engineering, and Platform Engineering with a deep, profound knowledge of SRE."
 - Persona: "devops-pe.ide.md"
 - Tasks:
   - [Implement Infrastructure Changes](create-platform-infrastructure.md)
@@ -99,7 +99,7 @@ Example: If above cfg has `agent-root: root/foo/` and `tasks: (agent-root)/tasks
 
 ## Title: Scrum Master: SM
 
-- Name: Bob
+- Name: Scrum-Master_Person
 - Customize: ""
 - Description: "Specialized in Next Story Generation"
 - Persona: "sm.md"

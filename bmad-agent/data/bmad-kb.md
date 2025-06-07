@@ -27,8 +27,8 @@
   - [SUGGESTED ORDER OF AGENT ENGAGEMENT (TYPICAL FLOW)](#suggested-order-of-agent-engagement-typical-flow)
   - [HANDLING MAJOR CHANGES](#handling-major-changes)
   - [IDE VS UI USAGE - GENERAL RECOMMENDATIONS](#ide-vs-ui-usage---general-recommendations)
-    - [CONCEPTUAL AND PLANNING PHASES](#conceptual-and-planning-phases)
-    - [TECHNICAL DESIGN, DOCUMENTATION MANAGEMENT \& IMPLEMENTATION PHASES](#technical-design-documentation-management--implementation-phases)
+    - [CONCEPTUAL, PLANNING PHASES and TECHNICAL DESIGN](#conceptual-planning-phases-and-technical-design)
+    - [DOCUMENTATION MANAGEMENT \& IMPLEMENTATION PHASES](#documentation-management--implementation-phases)
     - [BMAD METHOD FILES](#bmad-method-files)
   - [LEVERAGING IDE TASKS FOR EFFICIENCY](#leveraging-ide-tasks-for-efficiency)
     - [PURPOSE OF IDE TASKS](#purpose-of-ide-tasks)
@@ -204,50 +204,50 @@ Understanding the distinct roles and responsibilities of each agent is key to ef
 - **Analyst:**
 
   - **Function:** Handles research, requirements gathering, brainstorming, and the creation of Project Briefs.
-  - **Web Persona:** `Analyst (Mary)` with persona `personas#analyst`. Customized to be "a bit of a know-it-all, and likes to verbalize and emote." Uses `templates#project-brief-tmpl`.
-  - **IDE Persona:** `Analyst (Larry)` with persona `analyst.md`. Similar "know-it-all" customization. Tasks for Brainstorming, Deep Research Prompt Generation, and Project Brief creation are often defined within the `analyst.md` persona itself ("In Analyst Memory Already").
+  - **Web Persona:** `Analyst (Analyst_Person)` with persona `personas#analyst`. Customized to be "a bit of a know-it-all, and likes to verbalize and emote." Uses `templates#project-brief-tmpl`.
+  - **IDE Persona:** `Analyst (Analyst_Person)` with persona `analyst.md`. Similar "know-it-all" customization. Tasks for Brainstorming, Deep Research Prompt Generation, and Project Brief creation are often defined within the `analyst.md` persona itself ("In Analyst Memory Already").
   - **Output:** `Project Brief`.
 
 - **Product Manager (PM):**
 
   - **Function:** Responsible for creating and maintaining Product Requirements Documents (PRDs), overall project planning, and ideation related to the product.
-  - **Web Persona:** `Product Manager (John)` with persona `personas#pm`. Utilizes `checklists#pm-checklist` and `checklists#change-checklist`. Employs `templates#prd-tmpl`. Key tasks include `tasks#create-prd`, `tasks#correct-course`, and `tasks#create-deep-research-prompt`.
-  - **IDE Persona:** `Product Manager (PM) (Jack)` with persona `pm.md`. Focused on producing/maintaining the PRD (`create-prd.md` task) and product ideation/planning.
+  - **Web Persona:** `Product Manager (PM_Person)` with persona `personas#pm`. Utilizes `checklists#pm-checklist` and `checklists#change-checklist`. Employs `templates#prd-tmpl`. Key tasks include `tasks#create-prd`, `tasks#correct-course`, and `tasks#create-deep-research-prompt`.
+  - **IDE Persona:** `Product Manager (PM_Person)` with persona `pm.md`. Focused on producing/maintaining the PRD (`create-prd.md` task) and product ideation/planning.
   - **Output:** `Product Requirements Document (PRD)`.
 
 - **Architect:**
 
   - **Function:** Designs system architecture, handles technical design, and ensures technical feasibility.
-  - **Web Persona:** `Architect (Fred)` with persona `personas#architect`. Uses `checklists#architect-checklist` and `templates#architecture-tmpl`. Tasks include `tasks#create-architecture` and `tasks#create-deep-research-prompt`.
-  - **IDE Persona:** `Architect (Mo)` with persona `architect.md`. Customized to be "Cold, Calculating, Brains behind the agent crew." Generates architecture (`create-architecture.md` task), helps plan stories (`create-next-story-task.md`), and can update PO-level epics/stories (`doc-sharding-task.md`).
+  - **Web Persona:** `Architect (Architect_Person)` with persona `personas#architect`. Uses `checklists#architect-checklist` and `templates#architecture-tmpl`. Tasks include `tasks#create-architecture` and `tasks#create-deep-research-prompt`.
+  - **IDE Persona:** `Architect (Architect_Person)` with persona `architect.md`. Customized to be "Cold, Calculating, Brains behind the agent crew." Generates architecture (`create-architecture.md` task), helps plan stories (`create-next-story-task.md`), and can update PO-level epics/stories (`doc-sharding-task.md`).
   - **Output:** `Architecture Document`.
 
 - **Design Architect:**
 
   - **Function:** Focuses on UI/UX specifications, front-end technical architecture, and can generate prompts for AI UI generation services.
-  - **Web Persona:** `Design Architect (Jane)` with persona `personas#design-architect`. Uses `checklists#frontend-architecture-checklist`, `templates#front-end-architecture-tmpl` (for FE architecture), and `templates#front-end-spec-tmpl` (for UX/UI Spec). Tasks: `tasks#create-frontend-architecture`, `tasks#create-ai-frontend-prompt`, `tasks#create-uxui-spec`.
-  - **IDE Persona:** `Design Architect (Millie)` with persona `design-architect.md`. Customized to be "Fun and carefree, but a frontend design master." Helps design web apps, produces UI generation prompts (`create-ai-frontend-prompt.md` task), plans FE architecture (`create-frontend-architecture.md` task), and creates UX/UI specs (`create-uxui-spec.md` task).
+  - **Web Persona:** `Design Architect (Design-Architect_Person)` with persona `personas#design-architect`. Uses `checklists#frontend-architecture-checklist`, `templates#front-end-architecture-tmpl` (for FE architecture), and `templates#front-end-spec-tmpl` (for UX/UI Spec). Tasks: `tasks#create-frontend-architecture`, `tasks#create-ai-frontend-prompt`, `tasks#create-uxui-spec`.
+  - **IDE Persona:** `Design Architect (Design-Architect_Person)` with persona `design-architect.md`. Customized to be "Fun and carefree, but a frontend design master." Helps design web apps, produces UI generation prompts (`create-ai-frontend-prompt.md` task), plans FE architecture (`create-frontend-architecture.md` task), and creates UX/UI specs (`create-uxui-spec.md` task).
   - **Output:** `UX/UI Specification`, `Front-end Architecture Plan`, AI UI generation prompts.
 
 - **Product Owner (PO):**
 
   - **Function:** Agile Product Owner responsible for validating documents, ensuring development sequencing, managing the product backlog, running master checklists, handling mid-sprint re-planning, and drafting user stories.
-  - **Web Persona:** `PO (Sarah)` with persona `personas#po`. Uses `checklists#po-master-checklist`, `checklists#story-draft-checklist`, `checklists#change-checklist`, and `templates#story-tmpl`. Tasks include `tasks#story-draft-task`, `tasks#doc-sharding-task` (extracts epics and shards architecture), and `tasks#correct-course`.
-  - **IDE Persona:** `Product Owner AKA PO (Curly)` with persona `po.md`. Described as a "Jack of many trades." Tasks include `create-prd.md`, `create-next-story-task.md`, `doc-sharding-task.md`, and `correct-course.md`.
+  - **Web Persona:** `PO (PO_Person)` with persona `personas#po`. Uses `checklists#po-master-checklist`, `checklists#story-draft-checklist`, `checklists#change-checklist`, and `templates#story-tmpl`. Tasks include `tasks#story-draft-task`, `tasks#doc-sharding-task` (extracts epics and shards architecture), and `tasks#correct-course`.
+  - **IDE Persona:** `Product Owner AKA PO (PO_Person)` with persona `po.md`. Described as a "Jack of many trades." Tasks include `create-prd.md`, `create-next-story-task.md`, `doc-sharding-task.md`, and `correct-course.md`.
   - **Output:** User Stories, managed PRD/Backlog.
 
 - **Scrum Master (SM):**
 
   - **Function:** A technical role focused on helping the team run the Scrum process, facilitating development, and often involved in story generation and refinement.
-  - **Web Persona:** `SM (Bob)` with persona `personas#sm`. Described as "A very Technical Scrum Master." Uses `checklists#change-checklist`, `checklists#story-dod-checklist`, `checklists#story-draft-checklist`, and `templates#story-tmpl`. Tasks: `tasks#checklist-run-task`, `tasks#correct-course`, `tasks#story-draft-task`.
-  - **IDE Persona:** `Scrum Master: SM (SallySM)` with persona `sm.ide.md`. Described as "Super Technical and Detail Oriented," specialized in "Next Story Generation" (likely leveraging the `sm.ide.md` persona's capabilities).
+  - **Web Persona:** `SM (Scrum-Master_Person)` with persona `personas#sm`. Described as "A very Technical Scrum Master." Uses `checklists#change-checklist`, `checklists#story-dod-checklist`, `checklists#story-draft-checklist`, and `templates#story-tmpl`. Tasks: `tasks#checklist-run-task`, `tasks#correct-course`, `tasks#story-draft-task`.
+  - **IDE Persona:** `Scrum Master: SM (Scrum-Master_Person)` with persona `sm.ide.md`. Described as "Super Technical and Detail Oriented," specialized in "Next Story Generation" (likely leveraging the `sm.ide.md` persona's capabilities).
 
 - **Developer Agents (DEV):**
   - **Function:** Implement user stories one at a time. Can be generic or specialized.
-  - **Web Persona:** `DEV (Dana)` with persona `personas#dev`. Described as "A very Technical Senior Software Developer."
+  - **Web Persona:** `DEV (Full-Stack-Dev_Person)` with persona `personas#dev`. Described as "A very Technical Senior Software Developer."
   - **IDE Personas:** Multiple configurations can exist, using the `dev.ide.md` persona file (optimized for <6K characters for IDEs). Examples:
-    - `Frontend Dev (DevFE)`: Specialized in NextJS, React, Typescript, HTML, Tailwind.
-    - `Dev (Dev)`: Master Generalist Expert Senior Full Stack Developer.
+    - `Frontend Dev (Frontend-Dev_Person)`: Specialized in NextJS, React, Typescript, HTML, Tailwind.
+    - `Dev (Full-Stack-Dev_Person)`: Master Generalist Expert Senior Full Stack Developer.
   - **Configuration:** Specialized agents can be configured in `ide-bmad-orchestrator.cfg.md` for the IDE Orchestrator, or defined for the Web Orchestrator. Standalone IDE developer agents (e.g., `dev.ide.md`) are also available.
   - **When to Use:** During the implementation phase, typically working within an IDE.
 
