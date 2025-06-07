@@ -35,6 +35,10 @@
     "tmpl",
     "VARCHAR",
     "venv",
-    "WCAG"
+    "WCAG",
+
+    "GSAP",
+    "Tailwind",
+    "TailwindCSS"
   ]
 }
