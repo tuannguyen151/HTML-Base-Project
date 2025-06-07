@@ -1,5 +1,12 @@
 # GitHub Copilot Project Instructions
 
+## Core Principles
+
+- Always output answers in Vietnamese.
+- File text content is written in Vietnamese.
+- File code content is written in English.
+- Please reply concisely. Avoid unnecessary repetition or filler language.
+
 ## Project Overview
 
 This is an HTML project that uses GSAP for animation and Tailwind CSS for styling. When making suggestions, please consider the following framework-specific details and conventions.
