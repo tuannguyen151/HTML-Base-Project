@@ -21,7 +21,10 @@ Current Package Structure and Future Ideal Structure
 │   ├── assets - This folder holds all the asset files used in the project, such as images, JavaScript files, and CSS files.
 │   │   ├── images - A directory for storing all image files.
 │   │   ├── javascripts - Contains all JavaScript files.
-│   │   │   ├── gsap.min.js - A minified version of the GreenSock Animation Platform library (version 3.12.5) used for animations.
+│   │   │   ├── lib - Contains all libraries.
+│   │   │   │   ├── gsap.min.js - A minified version of the GreenSock Animation Platform library (version 3.13.0) used for animations.
+│   │   │   │   ├── ScrollTrigger.min.js - A minified version of the GSAP ScrollTrigger library used for animations.
+│   │   │   │   └── SplitText.min.js - A minified version of the GSAP SplitText library used for animations.
 │   │   │   └── main.js - The main JavaScript file where the core JavaScript logic of the project resides.
 │   │   └── stylesheets - Contains all CSS files.
 │   │       ├── dist - A subdirectory for storing build (or compiled) CSS files by Tailwind CSS.

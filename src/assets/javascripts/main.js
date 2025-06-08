@@ -1,4 +1,9 @@
 /**
+ * Register GSAP plugins
+ */
+gsap.registerPlugin(ScrollTrigger, SplitText)
+
+/**
  * Draws an SVG path animation using GSAP library.
  */
 const drawSvg = () => {

@@ -16,6 +16,8 @@ export default [
       globals: {
         ...globals.browser,
         gsap: 'readonly',
+        ScrollTrigger: 'readonly',
+        SplitText: 'readonly',
       },
     },
     plugins: { html },

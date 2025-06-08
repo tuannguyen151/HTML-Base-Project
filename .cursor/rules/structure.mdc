@@ -16,7 +16,10 @@ This project is an HTML project utilizing GSAP for animations and Tailwind CSS f
 │   ├── assets/ - Contains all static assets
 │   │   ├── images/ - Stores images
 │   │   ├── javascripts/ - Contains JavaScript files
-│   │   │   ├── gsap.min.js - GSAP library for animation
+│   │   │   ├── lib/ - Contains libraries
+│   │   │   │   ├── gsap.min.js - GSAP library
+│   │   │   │   ├── ScrollTrigger.min.js - GSAP ScrollTrigger library
+│   │   │   │   └── SplitText.min.js - GSAP SplitText library
 │   │   │   └── main.js - Main JavaScript file (js apply all)
 │   │   └── stylesheets/ - Contains CSS files
 │   │       ├── dist/ - CSS compiled by Tailwind
@@ -30,7 +33,7 @@ This project is an HTML project utilizing GSAP for animations and Tailwind CSS f
 
 - **HTML**: Structures web pages
 - **Tailwind CSS V3**: Utility-first CSS framework
-- **GSAP**: JavaScript library for creating animations
+- **GSAP 3.13.0**: JavaScript library for creating animations
 - **JavaScript**: Handles interactivity and DOM manipulation
 
 ## Important Files
