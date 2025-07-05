@@ -1,0 +1,111 @@
+{
+  "designSystem": {
+    "theme": {
+      "mode": "light",
+      "primaryColor": "#00B8D9",
+      "secondaryColor": "#00D084",
+      "backgroundColor": "#E5F7FF",
+      "accentColor": "#3B82F6",
+      "gradient": {
+        "type": "linear",
+        "angle": "135deg",
+        "colors": ["#00B8D9", "#00D084"]
+      }
+    },
+    "typography": {
+      "fontFamily": "Sans-serif",
+      "headingFontWeight": "bold",
+      "bodyFontWeight": "normal",
+      "defaultSize": "16px",
+      "headingSizes": {
+        "h1": "24px",
+        "h2": "20px",
+        "h3": "18px"
+      },
+      "textColor": "#1E293B"
+    },
+    "components": {
+      "card": {
+        "backgroundColor": "#FFFFFF",
+        "borderRadius": "20px",
+        "shadow": "0px 10px 20px rgba(0,0,0,0.05)",
+        "padding": "16px"
+      },
+      "button": {
+        "primary": {
+          "background": "#00B8D9",
+          "color": "#FFFFFF",
+          "borderRadius": "12px",
+          "fontWeight": "bold"
+        },
+        "secondary": {
+          "background": "#FFFFFF",
+          "border": "1px solid #00B8D9",
+          "color": "#00B8D9",
+          "borderRadius": "12px"
+        }
+      },
+      "input": {
+        "background": "#FFFFFF",
+        "border": "none",
+        "borderRadius": "12px",
+        "padding": "12px 16px",
+        "fontSize": "16px",
+        "shadow": "0 4px 8px rgba(0, 0, 0, 0.05)"
+      },
+      "navbar": {
+        "position": "bottom",
+        "background": "#FFFFFF",
+        "iconSize": "24px",
+        "activeColor": "#00B8D9",
+        "inactiveColor": "#94A3B8"
+      },
+      "iconButtons": {
+        "background": "#FFFFFF",
+        "borderRadius": "16px",
+        "shadow": "0px 4px 10px rgba(0,0,0,0.05)",
+        "iconSize": "20px"
+      },
+      "dropdown": {
+        "background": "#FFFFFF",
+        "borderRadius": "12px",
+        "padding": "12px",
+        "shadow": "0px 4px 12px rgba(0,0,0,0.05)",
+        "arrowIcon": "chevron-down"
+      }
+    },
+    "layout": {
+      "spacingUnit": "8px",
+      "padding": {
+        "screen": "20px",
+        "component": "16px"
+      },
+      "sectionGap": "24px",
+      "borderRadiusGlobal": "20px"
+    },
+    "effects": {
+      "glassmorphism": {
+        "enabled": true,
+        "background": "rgba(255, 255, 255, 0.2)",
+        "blur": "10px",
+        "border": "1px solid rgba(255, 255, 255, 0.3)"
+      },
+      "shadows": {
+        "default": "0px 10px 20px rgba(0,0,0,0.05)",
+        "intense": "0px 15px 30px rgba(0,0,0,0.1)"
+      }
+    },
+    "animation": {
+      "transitions": {
+        "duration": "0.3s",
+        "timingFunction": "ease-in-out"
+      },
+      "buttonHoverScale": "1.05"
+    },
+    "accessibility": {
+      "contrastRatio": "4.5:1",
+      "fontScaling": true,
+      "touchTargetMinSize": "44px"
+    }
+  }
+}
